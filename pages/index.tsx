@@ -1,6 +1,6 @@
 "use client";
 
-import { motion, Variants } from "framer-motion";
+import { motion, Variants, HTMLMotionProps } from "framer-motion";
 
 export default function Page() {
   const fadeInUp: Variants = { hidden: { opacity: 0, y: 50 }, visible: { opacity: 1, y: 0 } };
@@ -37,6 +37,7 @@ export default function Page() {
         />
         <div className="absolute inset-0 bg-black/40 z-10" />
         <motion.h1
+          {...({} as HTMLMotionProps<"h1">)}
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true }}
@@ -47,6 +48,7 @@ export default function Page() {
           Esküvői Videózás
         </motion.h1>
         <motion.p
+          {...({} as HTMLMotionProps<"p">)}
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true }}
@@ -57,6 +59,7 @@ export default function Page() {
           Megörökítjük életed legszebb pillanatait, hogy újra és újra átélhesd őket.
         </motion.p>
         <motion.a
+          {...({} as HTMLMotionProps<"a">)}
           href="#contact"
           initial="hidden"
           whileInView="visible"
@@ -82,6 +85,7 @@ export default function Page() {
           }}
         />
         <motion.h2
+          {...({} as HTMLMotionProps<"h2">)}
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true }}
@@ -91,6 +95,7 @@ export default function Page() {
           Rólunk
         </motion.h2>
         <motion.p
+          {...({} as HTMLMotionProps<"p">)}
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true }}
@@ -116,6 +121,7 @@ export default function Page() {
           }}
         />
         <motion.h2
+          {...({} as HTMLMotionProps<"h2">)}
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true }}
@@ -128,6 +134,7 @@ export default function Page() {
           {portfolioVideos.map((id, i) => (
             <motion.div
               key={i}
+              {...({} as HTMLMotionProps<"div">)}
               initial="hidden"
               whileInView="visible"
               viewport={{ once: true }}
@@ -159,6 +166,7 @@ export default function Page() {
           }}
         />
         <motion.h2
+          {...({} as HTMLMotionProps<"h2">)}
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true }}
@@ -168,6 +176,7 @@ export default function Page() {
           Kapcsolat
         </motion.h2>
         <motion.p
+          {...({} as HTMLMotionProps<"p">)}
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true }}
@@ -178,6 +187,7 @@ export default function Page() {
           Vedd fel velünk a kapcsolatot, és beszéljük meg a részleteket!
         </motion.p>
         <motion.a
+          {...({} as HTMLMotionProps<"a">)}
           href="mailto:info@imationwedding.hu"
           initial="hidden"
           whileInView="visible"
