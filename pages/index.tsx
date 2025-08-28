@@ -1,22 +1,8 @@
 "use client";
 
-import { useEffect, useState } from "react";
 import { motion, Variants } from "framer-motion";
 
 export default function Page() {
-  const [offsetY, setOffsetY] = useState(0);
-
-  const handleScroll = () => setOffsetY(window.scrollY);
-
-  useEffect(() => {
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
-
-  const parallaxStyle = (speed: number) => ({
-    transform: `translateY(${offsetY * speed}px)`,
-  });
-
   const fadeInUp: Variants = { hidden: { opacity: 0, y: 50 }, visible: { opacity: 1, y: 0 } };
   const fadeIn: Variants = { hidden: { opacity: 0 }, visible: { opacity: 1 } };
 
@@ -47,7 +33,6 @@ export default function Page() {
           style={{
             backgroundImage:
               "url('https://images.unsplash.com/photo-1529634806980-3d3e1f1c1f5b')",
-            ...parallaxStyle(0.3),
           }}
         />
         <div className="absolute inset-0 bg-black/40 z-10" />
@@ -94,7 +79,6 @@ export default function Page() {
           style={{
             backgroundImage:
               "url('https://images.unsplash.com/photo-1504674900247-0877df9cc836')",
-            ...parallaxStyle(0.2),
           }}
         />
         <motion.h2
@@ -129,7 +113,6 @@ export default function Page() {
           style={{
             backgroundImage:
               "url('https://images.unsplash.com/photo-1517841905240-472988babdf9')",
-            ...parallaxStyle(0.15),
           }}
         />
         <motion.h2
@@ -173,7 +156,6 @@ export default function Page() {
           style={{
             backgroundImage:
               "url('https://images.unsplash.com/photo-1517849845537-4d257902454a')",
-            ...parallaxStyle(0.1),
           }}
         />
         <motion.h2
