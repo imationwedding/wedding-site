@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { motion } from "framer-motion";
+import { motion, Variants } from "framer-motion";
 
 export default function Home() {
   const [offsetY, setOffsetY] = useState(0);
@@ -11,12 +11,12 @@ export default function Home() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  const fadeInUp = {
+  const fadeInUp: Variants = {
     hidden: { opacity: 0, y: 50 },
     visible: { opacity: 1, y: 0 },
   };
 
-  const fadeIn = {
+  const fadeIn: Variants = {
     hidden: { opacity: 0 },
     visible: { opacity: 1 },
   };
@@ -89,7 +89,7 @@ export default function Home() {
         </motion.a>
       </section>
 
-      {/* About Section with Parallax Background */}
+      {/* About Section */}
       <section
         id="about"
         className="relative py-20 px-6 md:px-20 text-center max-w-4xl mx-auto overflow-hidden"
@@ -124,7 +124,7 @@ export default function Home() {
         </motion.p>
       </section>
 
-      {/* Portfolio Section with Parallax Background */}
+      {/* Portfolio Section */}
       <section
         id="portfolio"
         className="relative py-20 px-6 md:px-20 bg-gray-50 overflow-hidden"
