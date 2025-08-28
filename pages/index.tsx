@@ -24,6 +24,7 @@ export default function Home() {
       >
         <div className="absolute inset-0 bg-black/40" />
         <motion.h1
+          as="h1"
           initial={{ opacity: 0, y: -50 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1 }}
@@ -32,6 +33,7 @@ export default function Home() {
           Esküvői Videózás
         </motion.h1>
         <motion.p
+          as="p"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 0.5 }}
@@ -40,6 +42,7 @@ export default function Home() {
           Megörökítjük életed legszebb pillanatait, hogy újra és újra átélhesd őket.
         </motion.p>
         <motion.a
+          as="a"
           href="#contact"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
