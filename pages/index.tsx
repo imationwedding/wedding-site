@@ -24,14 +24,14 @@ export default function Home() {
       >
         <div className="absolute inset-0 bg-black/40" />
         <motion.h1
-          as="h1"
-          initial={{ opacity: 0, y: -50 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1 }}
-          className="text-5xl md:text-7xl font-bold text-white z-10"
-        >
-          Esküvői Videózás
-        </motion.h1>
+  initial={{ opacity: 0, y: -50 }}
+  animate={{ opacity: 1, y: 0 }}
+  transition={{ duration: 1 }}
+  className="text-5xl md:text-7xl font-bold text-white z-10"
+>
+  Esküvői Videózás
+</motion.h1>
+
         <motion.p
           as="p"
           initial={{ opacity: 0 }}
