@@ -1,7 +1,9 @@
+"use client";
+
 import { useEffect, useState } from "react";
 import { motion, Variants } from "framer-motion";
 
-export default function Home() {
+export default function Page() {
   const [offsetY, setOffsetY] = useState(0);
 
   const handleScroll = () => setOffsetY(window.scrollY);
@@ -11,16 +13,13 @@ export default function Home() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  // Parallax függvény
   const parallaxStyle = (speed: number) => ({
     transform: `translateY(${offsetY * speed}px)`,
   });
 
-  // Animációk
   const fadeInUp: Variants = { hidden: { opacity: 0, y: 50 }, visible: { opacity: 1, y: 0 } };
   const fadeIn: Variants = { hidden: { opacity: 0 }, visible: { opacity: 1 } };
 
-  // Videók ID-i
   const portfolioVideos = ["ScMzIvxBSi4", "dQw4w9WgXcQ", "tgbNymZ7vqY"];
 
   return (
