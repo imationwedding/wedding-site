@@ -1,6 +1,6 @@
 "use client";
 
-import { motion, Variants, HTMLMotionProps } from "framer-motion";
+import { motion, Variants } from "framer-motion";
 
 export default function Page() {
   const fadeInUp: Variants = { hidden: { opacity: 0, y: 50 }, visible: { opacity: 1, y: 0 } };
@@ -30,14 +30,10 @@ export default function Page() {
       >
         <div
           className="absolute inset-0 bg-cover bg-center z-0"
-          style={{
-            backgroundImage:
-              "url('https://images.unsplash.com/photo-1529634806980-3d3e1f1c1f5b')",
-          }}
+          style={{ backgroundImage: "url('https://images.unsplash.com/photo-1529634806980-3d3e1f1c1f5b')" }}
         />
         <div className="absolute inset-0 bg-black/40 z-10" />
         <motion.h1
-          {...({} as HTMLMotionProps<"h1">)}
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true }}
@@ -48,7 +44,6 @@ export default function Page() {
           Esküvői Videózás
         </motion.h1>
         <motion.p
-          {...({} as HTMLMotionProps<"p">)}
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true }}
@@ -59,7 +54,6 @@ export default function Page() {
           Megörökítjük életed legszebb pillanatait, hogy újra és újra átélhesd őket.
         </motion.p>
         <motion.a
-          {...({} as HTMLMotionProps<"a">)}
           href="#contact"
           initial="hidden"
           whileInView="visible"
@@ -79,13 +73,9 @@ export default function Page() {
       >
         <div
           className="absolute inset-0 bg-cover bg-center z-0 opacity-30"
-          style={{
-            backgroundImage:
-              "url('https://images.unsplash.com/photo-1504674900247-0877df9cc836')",
-          }}
+          style={{ backgroundImage: "url('https://images.unsplash.com/photo-1504674900247-0877df9cc836')" }}
         />
         <motion.h2
-          {...({} as HTMLMotionProps<"h2">)}
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true }}
@@ -95,7 +85,6 @@ export default function Page() {
           Rólunk
         </motion.h2>
         <motion.p
-          {...({} as HTMLMotionProps<"p">)}
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true }}
@@ -115,13 +104,9 @@ export default function Page() {
       >
         <div
           className="absolute inset-0 bg-cover bg-center z-0 opacity-20"
-          style={{
-            backgroundImage:
-              "url('https://images.unsplash.com/photo-1517841905240-472988babdf9')",
-          }}
+          style={{ backgroundImage: "url('https://images.unsplash.com/photo-1517841905240-472988babdf9')" }}
         />
         <motion.h2
-          {...({} as HTMLMotionProps<"h2">)}
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true }}
@@ -134,7 +119,6 @@ export default function Page() {
           {portfolioVideos.map((id, i) => (
             <motion.div
               key={i}
-              {...({} as HTMLMotionProps<"div">)}
               initial="hidden"
               whileInView="visible"
               viewport={{ once: true }}
@@ -160,13 +144,9 @@ export default function Page() {
       >
         <div
           className="absolute inset-0 bg-cover bg-center z-0 opacity-20"
-          style={{
-            backgroundImage:
-              "url('https://images.unsplash.com/photo-1517849845537-4d257902454a')",
-          }}
+          style={{ backgroundImage: "url('https://images.unsplash.com/photo-1517849845537-4d257902454a')" }}
         />
         <motion.h2
-          {...({} as HTMLMotionProps<"h2">)}
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true }}
@@ -176,7 +156,6 @@ export default function Page() {
           Kapcsolat
         </motion.h2>
         <motion.p
-          {...({} as HTMLMotionProps<"p">)}
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true }}
@@ -187,7 +166,6 @@ export default function Page() {
           Vedd fel velünk a kapcsolatot, és beszéljük meg a részleteket!
         </motion.p>
         <motion.a
-          {...({} as HTMLMotionProps<"a">)}
           href="mailto:info@imationwedding.hu"
           initial="hidden"
           whileInView="visible"
